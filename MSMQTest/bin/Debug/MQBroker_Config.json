@@ -1,0 +1,25 @@
+﻿{
+	from:{ip:".", qname:"pmequeue"},
+	opAdd:[
+	        {ip:".", qname:"pmequeue_mirror", label:"A", compress: true, sendmode: "Loadbalance", enable:true},
+		{ip:"192.168.18.198", qname:"pixnet_pme", label:"A", compress: true, sendmode: "Broadcast", enable:true},
+		{ip:".", qname:"product_pme_pricecenter", label:"A", compress: true, sendmode: "Broadcast", enable:true},
+		{ip:".,192.168.18.198", qname:"product_pme_add", label:"A", compress: true, sendmode: "Loadbalance", enable:false},
+		{ip:"192.168.188.154", qname:"pixnet_pme", label:"A", compress: true, sendmode: "Broadcast", enable:false},
+		{ip:"192.168.188.153", qname:"product_pme_pricecenter", label:"A", compress: true, sendmode: "Broadcast", enable:false}
+	],
+	opUpdate:[
+                {ip:".", qname:"pmequeue_mirror", label:"E", compress: true, sendmode: "Loadbalance", enable:true},
+		{ip:"192.168.18.198", qname:"pixnet_pme", label:"E", compress: true, sendmode: "Broadcast", enable:true},
+		{ip:".", qname:"product_pme_pricecenter", label:"E", compress: true, sendmode: "Broadcast", enable:true},
+		{ip:"192.168.188.154", qname:"pixnet_pme", label:"E", compress: true, sendmode: "Broadcast", enable:false},
+                {ip:".", qname:"product_pme_pricechange", label:"price_change", compress: true, sendmode: "Broadcast", enable:false},
+		{ip:"192.168.188.153", qname:"product_pme_pricecenter", label:"E", compress: true, sendmode: "Broadcast", enable:false}
+	],
+	opDelete:[
+                {ip:".", qname:"pmequeue_mirror", label:"D", compress: true, sendmode: "Loadbalance", enable:true},
+		{ip:"192.168.18.198", qname:"pixnet_pme", label:"D", compress: true, sendmode: "Broadcast", enable:true},
+		{ip:"192.168.188.154", qname:"pixnet_pme", label:"D", compress: true, sendmode: "Broadcast", enable:false},
+                {ip:"192.168.188.153", qname:"product_pme_pricecenter", label:"D", compress: true, sendmode: "Broadcast", enable:false}
+	]
+}
