@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MSMQTest.Model
+namespace MQWForm.Model
 {
     public class MQConfig
     {

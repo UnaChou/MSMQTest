@@ -86,7 +86,7 @@ namespace MQWeb
                 data.unm = DateTime.Now.Second;
 
                 //發送訊息
-                myQueue.Send(data, "MY 標題");
+                myQueue.Send(data, "MY--"+DateTime.Now.ToShortDateString());
               
             }
             catch (MessageQueueException e)

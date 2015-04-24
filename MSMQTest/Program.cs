@@ -1,4 +1,4 @@
-﻿using MSMQTest.Model;
+﻿using MQWForm.Model;
 using Serilog;
 using SimpleMsmqLibrary;
 using System;
@@ -12,7 +12,7 @@ using System.Threading;
 using Newtonsoft.Json;
 using System.IO;
 
-namespace MSMQTest
+namespace MQWForm
 {
     static class Program
     {

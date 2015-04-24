@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MSMQTest
+namespace MQWForm
 {
     public partial class Form1 : Form
     {
@@ -113,7 +113,7 @@ namespace MSMQTest
             System.Messaging.Message message = myQueue.Receive();//接收訊息佇列內的訊息
             MyData data = (MyData)message.Body;//將訊息內容轉成正確型別
 
-            txt.Text += data;
+            //txt.Text += data;
         }
     }
 }
